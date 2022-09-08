@@ -1,0 +1,33 @@
+main section {
+  padding: 3em;
+}
+main #landing {
+  height: 80vh;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6901960784), rgba(0, 0, 0, 0.6901960784)), url("../images/cover_bg_1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+main #landing h1 {
+  font-size: 60px;
+}
+main #landing p {
+  margin-top: 1em;
+  width: 50%;
+  font-size: 16px;
+}
+main #ways .container .group .col {
+  display: flex;
+}
+main #ways .container .group .col:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+main #ways .container .group .col .info img {
+  height: 100px;
+}/*# sourceMappingURL=giving.css.map */

@@ -1,0 +1,136 @@
+// viewports
+$mobiles: 280px;
+$tablets: 768px;
+$desktop: 1100px;
+
+@mixin mobile {
+    @media (min-width: #{$mobiles}){
+        @content;
+    }
+}
+@mixin tablets {
+    @media (min-width: #{$tablets}){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+header{
+    overflow-x: hidden;
+    #tab1{
+        background: #E590B5;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        align-content: center;
+        justify-items: center;
+        padding: 5px;
+        font-size: 12px;
+        img{
+            width: 25px;
+        }
+        a{
+            color: #ffffff;
+        }
+        li{
+            margin: 5px;
+        }
+        #lead-ul{
+            grid-row: 1/2;
+        }
+        #child-ul{
+            grid-row: 2/3;
+        }
+    }
+    #tab2{
+        padding: 5px;
+        background: #ffffff;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 60px;
+        nav{
+            height: 100%;
+            @include mobile{
+                position: fixed;
+                height: 100vh;
+                width: 50%;
+                background-color: #ffffff;
+                top: 0;
+                right: 0;
+                z-index: 999;
+                padding: 1.2em;
+            }
+            @include tablets{
+                all: unset;
+            }
+
+            ul{
+                height: inherit;
+                display: flex;
+                flex-direction: column;
+                @include tablets{
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .active{
+                    color: #E590B5;
+                }
+                li{
+                    font-size: 14px;
+                    margin: 0 10px;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    a{
+                        color: #000000;
+                    }
+                }
+                #donate{
+                    padding: 5px 20px;
+                    border-radius: 4px;
+                    background: #E590B5;
+                    a{
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        label{
+            @include tablets{
+                display: none;
+            }
+            div{
+                position: relative;
+                width: 24px;
+                height: 3px;
+                background-color: #E590B5;
+                &::after,&::before{
+                    position: absolute;
+                    content: '';
+                    width: 24px;
+                    height: 3px;
+                    background-color: #E590B5;
+                }
+                &::after{
+                    top: -7px;
+                }
+                &::before{
+                    top: 7px;
+                }
+            }
+        }
+    }
+    .fixedheader{
+        position: fixed;
+        z-index: 999999;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+        box-shadow: 0 -8px 10px rgba(0,0,0,0.5);
+    }
+}

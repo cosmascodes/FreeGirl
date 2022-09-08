@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free the Girl</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/giving.css">    
+    <link rel="stylesheet" href="../styles/footer.css">
+
+    <!-- AOS animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+    <header>
+        <div id="tab1">
+            <ul id="lead-ul">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul id="child-ul">
+                <li><a href="#"><img src="../images/facebook.png" alt="..."></a></li>
+                <li><a href="#"><img src="../images/twitter.png" alt="..."></a></li>
+                <li><a href="#"><img src="../images/insta.png" alt="..."></a></li>
+            </ul>
+        </div>
+        <div id="tab2">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Team</li>
+                    <li>Projects</li>
+                    <li>Stories</li>
+                    <li class="active">Ways of giving</li>
+                    <li id="donate"><a href="#">Donate</a></li>
+                </ul>
+            </nav>
+            <label>
+                <div></div>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <section id="landing">
+            <h1>Ways to give</h1>
+            <p>Whether you are able to give a one-time or ongoing donation, know that your generosity will bring happiness to our girls</p>
+
+        </section>
+        <section id="ways">
+            <div class="container">
+                <div class="group">
+                    <div class="heading">
+                        <h1>Child Support Fund</h1>
+                    </div>
+                    <div class="col">
+                        <div class="info">
+                            <img src="../images/animal1.webp" alt="..."/>
+                            <h3>Tembo Level</h3>
+                            <p>$400 per month provides full sponsorship of one child per month</p>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="cover-photo-1"></div>
+                    </div>
+                    <div class="col">
+                        <div class="info">
+                            <img src="../images/animal2.webp" alt="..."/>
+                            <h3>Simba Level</h3>
+                            <p>$100 per month provides shared sponsorship of one child per month</p>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="cover-photo-2"></div>
+                    </div>
+                    <div class="col">
+                        <div class="info">
+                            <img src="../images/animal3.webp" alt="..."/>
+                            <h3>Twiga Level</h3>
+                            <p>$40 per month provides shared sponsorship of one child per month</p>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="cover-photo-4"></div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="heading">
+                        <h1>General Fund</h1>
+                    </div>
+                    <div class="col">
+                        <div class="info">
+                            <img src="../images/animal1.webp" alt="..."/>
+                            <h3>Moyo Level</h3>
+                            <p>One-time or ongoing donation of any amount to help the greatest area of need</p>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="cover-photo-5"></div>
+                    </div>
+                </div>
+                <div class="group">
+                    <div class="heading">
+                        <h1>Scholarship Fund</h1>
+                    </div>
+                    <div class="col">
+                        <div class="info">
+                            <img src="../images/animal1.webp" alt="..."/>
+                            <h3>Bundi Level</h3>
+                            <p>A one-time or ongoing donation to help supplement the cost of higher education</p>
+                            <a href="#">Donate</a>
+                        </div>
+                        <div class="cover-photo-6"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="#"><img src="../images/twitter.png" alt="..."></a></li>
+            <li><a href="#"><img src="../images/facebook.png" alt="..."></a></li>
+            <li><a href="#"><img src="../images/insta.png" alt="..."></a></li>
+            <li><a href="#"><img src="../images/linkedin.png" alt="..."></a></li>
+        </ul>
+        <p>Copyright 2022. All rights reserved.</p>
+        <p>Made with heart by <a href="#">Doublecode</a>.</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            let element = document.getElementById("tab2") 
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {              
+                element.classList.add("fixedheader");
+            } else {
+                element.classList.remove("fixedheader");
+
+            }
+        }
+    </script>
+</body>
+</html>

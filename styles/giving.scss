@@ -1,0 +1,43 @@
+main{
+    section{
+        padding: 3em;
+    }
+    #landing{
+        height: 80vh;
+        background: linear-gradient(90deg,#000000b0,#000000b0),url('../images/cover_bg_1.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        h1{
+            font-size: 60px;
+        }
+        p{
+            margin-top: 1em;
+            width: 50%;
+            font-size: 16px;
+        }
+    }
+    #ways{
+        .container{
+            .group{
+                .col{
+                    display: flex;
+                    &:nth-child(odd){
+                        flex-direction: row-reverse;
+                    }
+                    .info{
+                        img{
+                            height: 100px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
