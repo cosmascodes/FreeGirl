@@ -55,6 +55,7 @@ header{
         nav{
             height: 100%;
             @include mobile{
+                display: none;
                 position: fixed;
                 height: 100vh;
                 width: 50%;

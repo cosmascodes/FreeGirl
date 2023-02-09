@@ -1,0 +1,90 @@
+$mobiles: 280px;
+$tablets: 768px;
+$desktop: 1100px;
+
+@mixin mobile {
+    @media (min-width: #{$mobiles}){
+        @content;
+    }
+}
+@mixin tablets {
+    @media (min-width: #{$tablets}){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content;
+    }
+}
+
+#landing{
+    background: linear-gradient(90deg,#000000b0,#000000b0),url('../images/cover_bg_1.jpg');
+    height: 70vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    h1{
+        font-size: 60px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+#team{
+    .board,.staff{
+        padding: 1.2em;
+        h1{
+            font-size: 2.2em;
+            text-align: center;
+            margin: 1.2em;
+        }
+        .wrapper{
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+            @include tablets{
+                width: 80%;
+            }
+            .person{
+                box-shadow: 0px 5px 80px -15px rgb(52 60 66 / 5%);
+                margin: 1.2em;
+                text-align: center;
+                border-radius: 15px;
+                overflow: hidden;
+                .image{
+                    height: 300px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                    }
+                }
+                .titles{
+                    padding: 1.2em;
+                    span{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 30px;
+                            height: 2px;
+                            background: black;
+                            bottom: -10px;
+                            left: calc(50% - 15px);
+                        }
+                    }
+                }
+                .description{
+                    padding:0 1.2em 1.2em 1.2em;
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

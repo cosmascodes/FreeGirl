@@ -48,7 +48,6 @@ main #landing h1 {
   }
 }
 main #landing .heading {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 1.1em 0;
